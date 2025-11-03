@@ -137,7 +137,7 @@ else:
                     boxmean=True,
                     hovertext=sub["country"],
                     hovertemplate="<b>%{hovertext}</b><br>"
-                                  f"{metric_field}: %{y:,.2f}<extra></extra>"
+                                  f"{metric_field}: %{{y:,.2f}}<extra></extra>"
                 ),
                 row=1, col=1
             )
@@ -159,7 +159,7 @@ else:
                     boxmean=True,
                     hovertext=sub["country"],
                     hovertemplate="<b>%{hovertext}</b><br>"
-                                  f"{metric_field}: %{y:,.2f}<extra></extra>"
+                                  f"{metric_field}: %{{y:,.2f}}<extra></extra>"
                 ),
                 row=1, col=1
             )
@@ -172,8 +172,8 @@ else:
                 y=f_latest[metric_field],
                 mode="markers",
                 text=f_latest["country"],
-                hovertemplate="<b>%{text}</b><br>GDP per Capita: %{x:,.0f}<br>"
-                              f"{metric_field}: %{y:,.2f}<extra></extra>"
+                hovertemplate="<b>%{text}</b><br>GDP per Capita: %{{x:,.0f}}<br>"
+                              f"{metric_field}: %{{y:,.2f}}<extra></extra>"
             ),
             row=2, col=1
         )
@@ -210,5 +210,3 @@ st.markdown(
 3. Adjust charts to use the fields you care about.
 """
 )
-
-
